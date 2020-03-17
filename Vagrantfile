@@ -70,4 +70,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
   end
 
+  # Install python, SSH, repositories
+  config.vm.provision :shell, :path => "provisioning/bootstrap.sh"
+  config.vm.provision :shell, :path => "provisioning/download-modules.sh", privileged: false, :args => [ENV["VAGRANT_NAME"], ENV["VAGRANT_EMAIL"]]
+
 end
