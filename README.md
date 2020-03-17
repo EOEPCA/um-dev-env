@@ -7,3 +7,4 @@ Tools and environment definitions for local EOEPCA service development activitie
 3. Unzip template and get into created directory
 4. Initiate EOEPCA development environment in text-only mode (vagrant up) or (DEV_DESKTOP=true vagrant up) for the graphical user environment
 5. Access the development environment (vagrant ssh)
+
