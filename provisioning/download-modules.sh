@@ -9,7 +9,11 @@ cat /home/vagrant/githubKey >> /home/vagrant/.ssh/known_hosts
 rm /home/vagrant/githubKey
 
 # INSERT THE REPOSITORIES IN A LIST (separated by a single space) HERE:
-REPOS="um-service-template um-pylibrary-template um-buildingblock-template um-common-oidc-client"
+TEMPLATES="um-service-template um-pylibrary-template um-buildingblock-template "
+LIBRARIES="um-common-oidc-client um-common-uma-client um-common-scim-client " 
+SERVICES=""
+BUILDING_BLOCKS=""
+REPOS="$TEMPLATES $LIBRARIES $SERVICES $BUILDING_BLOCKS"
 for i in $REPOS;
 do
     git clone "git@github.com:EOEPCA/"$i".git" /home/vagrant/$i
