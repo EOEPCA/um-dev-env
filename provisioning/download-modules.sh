@@ -11,7 +11,7 @@ rm /home/vagrant/githubKey
 # INSERT THE REPOSITORIES IN A LIST (separated by a single space) HERE:
 TEMPLATES="um-service-template um-pylibrary-template um-buildingblock-template "
 LIBRARIES="um-common-oidc-client um-common-uma-client um-common-scim-client " 
-SERVICES=""
+SERVICES="um-pep-engine um-login-engine um-common-gluu"
 BUILDING_BLOCKS=""
 REPOS="$TEMPLATES $LIBRARIES $SERVICES $BUILDING_BLOCKS"
 for i in $REPOS;
