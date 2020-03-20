@@ -17,4 +17,6 @@ REPOS="$TEMPLATES $LIBRARIES $SERVICES $BUILDING_BLOCKS"
 for i in $REPOS;
 do
     git clone "git@github.com:EOEPCA/"$i".git" /home/vagrant/$i
+    cd /home/vagrant/$i && git flow init -d
+    cd /home/vagrant
 done
