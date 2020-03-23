@@ -7,4 +7,4 @@ boxes/*
 /.vagrant
 
 # Security stuff
-secure/
+id_rsa
