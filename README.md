@@ -17,6 +17,7 @@ Tools and environment definitions for local EOEPCA service development activitie
         * AsciiDoc
         * EditorConfig for VS Code
         * Docker
+        * Terraform
     1. Further customize your VSCode with themes, if you so desire (https://marketplace.visualstudio.com/search?target=VSCode&category=Themes)
 6. Setup your dev env: git clone https://github.com/EOEPCA/um-dev-env.git'
 5. Copy your SSH key to ./secure/id_rsa (create the folder if needed). Make sure it's named "id_rsa"
