@@ -12,7 +12,7 @@ rm /home/vagrant/githubKey
 TEMPLATES="um-service-template um-pylibrary-template um-buildingblock-template "
 LIBRARIES="um-common-oidc-client um-common-uma-client um-common-scim-client " 
 SERVICES="um-pep-engine um-login-engine um-common-gluu"
-BUILDING_BLOCKS="um-login-buildingblock"
+BUILDING_BLOCKS="um-login-service"
 REPOS="$TEMPLATES $LIBRARIES $SERVICES $BUILDING_BLOCKS"
 for i in $REPOS;
 do
