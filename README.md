@@ -2,33 +2,39 @@
 Tools and environment definitions for local EOEPCA service development activities, specifically tailored for the User Management environment
 
 ## Setup
-1. (Optional but recommended, to be able to pull changes from this repository) Install git on your system. Make sure you configure the user and email.
-2. (Mandatory) Add your SSH key to github [(instructions)](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). This key will be used inside the VM to commit your work
-3. (Mandatory) Install VirtualBox on your system
-4. (Mandatory) Install Vagrant (https://www.vagrantup.com/docs/installation/)
-5. (Mandatory) Install VSCode (https://code.visualstudio.com/)
-   1. (Mandatory) Add the following extensions to your VSCode installation (https://code.visualstudio.com/docs/editor/extension-gallery):
-        * Vagrant
-        * Vagrantfile Support
-        * Python
-        * Remote - SSH 
-        * Diff
-        * Markdown All in One
-        * AsciiDoc
-        * EditorConfig for VS Code
-        * Docker
-        * Terraform
-    1.(Optional) Further customize your VSCode with themes, if you so desire (https://marketplace.visualstudio.com/search?target=VSCode&category=Themes)
-6. (Mandatory) Setup your dev env: git clone https://github.com/EOEPCA/um-dev-env.git'
-7. (Mandatory) Copy your SSH key to secure/id_rsa. **Make sure it's named "id_rsa"**
-8. (Mandatory) Go to VSCode's SSH - remote icon on VSCode Add a new ssh target: "ssh vagrant@192.168.33.10"
-9. (Mandatory) Before executing Vagrant, make sure you set the env variables for your name and email so vagrant can set up git for you. Please remember that VSCode has a handy integrated terminal you can use for this and during development. This step is only needed when you first setup the machine for the first time:
+### Environment
+1. Install git on your system. Make sure you configure the user and email.
+2. Add your SSH key to github [(instructions)](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). This key will be used inside the VM to commit your work
+3. Install VirtualBox on your system
+4. Install Vagrant (https://www.vagrantup.com/docs/installation/)
+6. Setup your dev env: git clone https://github.com/EOEPCA/um-dev-env.git'
+7. Copy your SSH key to secure/id_rsa. **Make sure it's named "id_rsa"**
+
+### IDE: Development with VSCode
+In an effort to have the entire development team aligned, VSCode is proposed along with some appropiate extensions. Keep in mind the IDE is not strictly needed, and you could develop from any other IDE with similar capabilities or extensions. 
+1. Install VSCode (https://code.visualstudio.com/)
+   1. Add the following extensions to your VSCode installation (https://code.visualstudio.com/docs/editor/extension-gallery):
+        * Vagrant (bbenoist.vagrant) 
+        * Vagrantfile Support (marcostazi.VS-code-vagrantfile)
+        * Python (ms-python.python)
+        * Remote - SSH (ms-vscode-remote.remote-ssh)
+        * Diff (fabiospampinato.vscode-diff)
+        * Markdown All in One (yzhang.markdown-all-in-one)
+        * AsciiDoc (joaompinto.asciidoctor-vscode)
+        * EditorConfig for VS Code (editorconfig.editorconfig)
+        * Docker (ms-azuretools.vscode-docker)
+        * Terraform (mauve.terraform)
+    1.(**Optional**) Further customize your VSCode with themes, if you so desire (https://marketplace.visualstudio.com/search?target=VSCode&category=Themes)
+1. Go to VSCode's SSH - remote icon on VSCode Add a new ssh target: "ssh vagrant@192.168.33.10"
+
+### Config and Final setup
+1.  Before executing Vagrant, make sure you set the env variables for your name and email so vagrant can set up git for you. Please remember that VSCode has a handy integrated terminal you can use for this and during development. This step is only needed when you first setup the machine for the first time:
   * Using Powershell:
     * $env:VAGRANT_NAME = 'yourname'
     * $env:VAGRANT_EMAIL = 'your-github-email'
   * Using Bash
-    * VAGRANT_EMAIL = 'your-github-email'
-    * VAGRANT_NAME = 'yourname'
+    * export VAGRANT_EMAIL='your-github-email'
+    * export VAGRANT_NAME='yourname'
 
 8. Initiate EOEPCA development environment: "vagrant up"
 
