@@ -12,5 +12,5 @@ chmod 600 /home/vagrant/.ssh/id_rsa
 # install git flow
 apt-get install git-flow -q -y
 
-# install net tools (ie. netstat)
-apt install net-tools -q -y
+# install net tools, ldap-utils (ie. netstat)
+apt install net-tools ldap-utils -q -y
