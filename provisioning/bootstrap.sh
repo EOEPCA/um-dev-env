@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt updgrade -y
+apt upgrade -y
 
 # install python
 apt-get install python-dev python3-pip -q -y
