@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
+apt updgrade -y
 
 # install python
 apt-get install python-dev python3-pip -q -y
@@ -14,3 +15,6 @@ apt-get install git-flow -q -y
 
 # install net tools, ldap-utils (ie. netstat)
 apt install net-tools ldap-utils -q -y
+
+# install xorg, firefox
+apt install xorg firefox -q -y
