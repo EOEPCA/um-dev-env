@@ -50,3 +50,9 @@ Once you are inside, the first time you will need to "install remotely" the exte
 
 ## Passing files between host & VM
 The folder "synced" is linked to the VM, and you can use it to pass information between the VM and the host. (on the VM it's located at /home/vagrant/synced)
+
+## Possible issues
+- On VirtualBox versions 6.1.32, 6.1.34 and possible future versions, executing minikube commands might get stuck with the following error:  
+  > watchdog: BUG: soft lockup - CPU#4 stuck for 23s! \[dockerd:2077\]  
+
+  If that happens, downgrade VirtualBox to version 6.1.30.
